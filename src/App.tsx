@@ -15,8 +15,6 @@ function App() {
         </thead>
         <UserList users={users} />
       </table>
-      <button>Button 1</button>
-      <button>Button 2</button>
     </div>
   );
 }
