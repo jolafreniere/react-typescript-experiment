@@ -1,5 +1,5 @@
 import React from 'react';
-import { UserEntity } from '../model/User';
+import { UserEntity } from '../../model/User';
 
 export default function User({user}: {user: UserEntity}) {
   return (

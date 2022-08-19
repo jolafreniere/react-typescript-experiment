@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
-import UserTable from './components/UserTable';
+import UserTable from './components/User/UserTable';
 import { UserEntity } from './model/User';
 function App() {
   const [users, setUsers] = useState<UserEntity[]>([]);
