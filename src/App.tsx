@@ -16,9 +16,6 @@ function App() {
   return (
     <div className="App">
       <UserTable users={users} />
-      <div>
-        <button>Clear</button>
-      </div>
     </div>
   );
 }

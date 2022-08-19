@@ -2,8 +2,8 @@ import { render, screen } from '@testing-library/react';
 import React from 'react';
 import App from './App';
 
-test('renders learn react link', () => {
+test('renders table title', () => {
   render(<App />);
-  const UsersHeaderElement = screen.getByText(/Users/i);
-  expect(UsersHeaderElement).toBeInTheDocument();
+  const UsersTitleElement = screen.getByText(/User/i);
+  expect(UsersTitleElement).toBeInTheDocument();
 });
