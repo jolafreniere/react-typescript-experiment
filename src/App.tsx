@@ -1,30 +1,21 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
-import UserList from './UserList';
+import UserTable from './components/UserTable';
+import { UserEntity } from './model/User';
 function App() {
-  const [users, setUsers] = useState<any[]>([]);
+  const [users, setUsers] = useState<UserEntity[]>([]);
   useEffect( () => {
     loadPlaceholderUsers();
   }, []);
 
   const loadPlaceholderUsers = async () => {
     const response = await fetch('https://jsonplaceholder.typicode.com/users');
-    const users = await response.json();
+    const users : UserEntity[] = await response.json();
     setUsers(users);
   }
   return (
     <div className="App">
-      <h1>Users</h1>
-      <table>
-        <thead>
-          <tr>
-            <th>Userame</th>
-            <th>Name</th>
-            <th>Phone</th>
-          </tr>
-        </thead>
-        <UserList users={users} />
-      </table>
+      <UserTable users={users} />
       <div>
         <button>Clear</button>
       </div>
