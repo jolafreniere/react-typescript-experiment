@@ -5,7 +5,7 @@ export default function UserList({users} : any) {
     <tbody>
         {
           users.map((user: any) => {
-            return <User user={user}/>
+            return <User key={user.id} user={user}/>
           })
         }
     </tbody>
